@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C1D6D6"
+    tools:context=".ViewAllActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#002e3e">
+		
+
+
+		<ImageButton 
+		    android:layout_toLeftOf="@+id/sort_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+	        android:src="@drawable/ic_action_add_person"
+	        android:onClick="viewAllToAddScreen"
+	        android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/photo_description"/>
+        
+        <ImageButton 
+            android:id="@id/sort_button"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_action_sort_by_size"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/photo_description"/>
+
+        
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:background="#C1D6D6">
+    </ListView>	
+    
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_marginRight="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:queryHint="Search for a Contact"/>
+
+</LinearLayout>

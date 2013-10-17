@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ContactManager</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings for activity_add.xml -->
+    
+	<string name="edit_header">Edit Contact</string>
+    <string name="add_header">Create New Contact</string>
+    <string name="add_name_header">Name</string>
+    <string name="add_contact_header">Contact Details</string>
+    <string name="add_personal_header">Personal Details</string>
+    <string name="add_label_name_hint">Enter Name</string>
+    <string name="add_label_address_street">Street</string>
+    <string name="add_label_address_suburb">Suburb</string>
+    <string name="add_label_address_city">City</string>
+    <string name="add_label_address_hint">Enter Address</string>
+    <string name="add_label_phone_hint">Enter Phone No.</string>
+    <string name="add_label_hint_day">dd</string>
+    <string name="add_label_hint_month">mm</string>
+    <string name="add_label_hint_year">yyyy</string>
+    <string name="add_save_button">Save</string>
+    <string name="add_cancel_button">Cancel</string>
+
+    <!-- Strings used as labels/headers for the contacts details -->
+    <string name="label_name_first">First</string>
+    <string name="label_name_last">Last</string>
+    <string name="label_mobile_ph">Mobile Ph</string>
+    <string name="label_home_ph">Home Ph</string>
+    <string name="label_work_ph">Work Ph</string>
+    <string name="label_email_address">Email Address</string>
+    <string name="label_birth_date">Date of Birth</string>
+    <string name="label_home_address">Home Address</string>
+    <string name="photo_description">Contact Photo</string>
+    <string name="back_button">Back</string>
+    <string name="edit_button">Edit</string>
+    <string name="delete_button">Delete</string>
+    <string name="add_button">+</string>
+    <string name="title_activity_view">ViewActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="spinner_header">Sort By</string>
+
+    <string-array name="sort_array">
+        <item>Last Name</item>
+        <item>First Name</item>
+        <item>Phone</item>
+    </string-array>
+
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
