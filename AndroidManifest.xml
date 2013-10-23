@@ -8,7 +8,8 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/default_contact"
@@ -16,12 +17,19 @@
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.contactmanager.AddActivity" >
         </activity>
-        <activity android:name="com.example.contactmanager.ViewAllActivity" >
+        <activity android:name="com.example.contactmanager.HomePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
         <activity android:name="com.example.contactmanager.HomeActivity" >
         </activity>
@@ -31,8 +39,16 @@
             android:name="com.example.contactmanager.EditActivity"
             android:label="@string/title_activity_edit" >
         </activity>
+        <activity
+            android:name="com.example.contactmanager.SearchableActivity"
+            android:label="@string/title_activity_searchable" >
+        </activity>
+        <activity
+            android:name="com.example.contactmanager.SearchResultsActivity"
+            android:label="@string/title_activity_search_results" >
+        </activity>
     </application>
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
 
 </manifest>

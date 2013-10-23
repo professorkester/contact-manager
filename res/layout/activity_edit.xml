@@ -2,387 +2,372 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"    
     android:background="#C1D6D6"
-    android:windowActionBar="false"  
+    android:orientation="vertical"
+    android:windowActionBar="false"
     tools:context=".AddActivity" >
-	
-	    <RelativeLayout
-	            android:layout_width="match_parent"
-	            android:layout_height="wrap_content"
-	            android:background="#002e3e"
-				>
-	        
-	        <Button
-	            android:id="@+id/save_button"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:text="@string/add_save_button"
-	            android:layout_alignParentRight="true"
-	            android:background="#002e3e"
-	            android:textColor="#FFFFFF"
-	            android:textStyle="bold"
-	            android:onClick="saveButton"
-	            />
-	    	
-	    	<View
-	    	    android:layout_marginLeft="6dp"
-	    	    android:layout_marginTop="10dp"
-	    	    android:id="@+id/divider"
-			    android:layout_width="2dp"
-			    android:layout_height="30dp"
-			    android:layout_toLeftOf="@id/save_button"
-			    android:background="@android:color/darker_gray"/>
-	    	
-	        <Button
-	            android:id="@+id/cancel_button"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentTop="true"
-	            android:layout_toLeftOf="@+id/divider"
-	            android:text="@string/add_cancel_button"
-	            android:background="#002e3e"
-	            android:textColor="#FFFFFF"
-	            android:textStyle="bold"
-	            android:onClick="cancelButton" />
-	        
-	   	</RelativeLayout>
-	    
-	    <RelativeLayout  
-	        android:background="#000000"      
-	        android:layout_width="match_parent"
-	    	android:layout_height="50dp" 
-	    	android:orientation="horizontal">
-	        
-	        <ImageButton 
-	            android:layout_alignParentRight="true"
-	            android:layout_width="50dp"
-	            android:layout_height="50dp"
-	            android:src="@drawable/default_contact"
-	            android:scaleType="centerInside"
-	            android:adjustViewBounds="true"
-	            android:contentDescription="@string/photo_description"/>
-	        	
-	        <TextView
-	            android:layout_centerVertical="true"
-	            android:id="@+id/edit_contact"
-	            android:layout_marginLeft="16dp"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/edit_header"
-		        android:textStyle="bold"
-		        android:textSize="24sp"
-		        android:textColor="#FFFFFF">
-	            
-	        </TextView>
-	        
-	
-	    </RelativeLayout>
-		
-		<ScrollView 
-	    android:id="@+id/ScrolView" 
-	    android:layout_width="fill_parent" 
-	    android:layout_height="fill_parent" >
 
-	    <LinearLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#002e3e" >
 
-		<TextView
-	        android:layout_marginTop="10dp"
-	        android:textColor="#000000"
-	        android:textSize="20sp"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="16dp"
-	        android:textStyle="bold"
-	        android:text="@string/add_name_header" />
-	    
-		<LinearLayout 
-		    android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_name_first"
-			        android:layout_marginLeft="16dp" 
-			        
-			        style="@style/TextViewStyle"/>		    
-			    
-			    <EditText
-			        android:layout_marginRight="16dp" 
-			        android:id="@+id/edit_first_name"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic" />
-			        
-		    
-	    </LinearLayout>
-		
-		<LinearLayout 
-		    android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_name_last"
-			        android:layout_marginLeft="16dp" 
-			        
-			        style="@style/TextViewStyle"/>		    
-			    
-			    <EditText 
-			        android:layout_marginRight="16dp"
-			        android:id="@+id/edit_last_name"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic" />
-	  
-	    </LinearLayout>
-	    
-	    <View
-	        android:layout_marginTop="10dp"
-		    android:layout_width="fill_parent"
-		    android:layout_height="2dp"
-		    android:background="#002e3e"
-		    android:layout_marginLeft="16dp"
-	        android:layout_marginRight="16dp"/>	
-	    
-	    <TextView
-	        android:layout_marginTop="10dp"
-	        android:textColor="#000000"
-	        android:textSize="20sp"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="16dp"
-	        android:textStyle="bold"
-	        android:text="@string/add_contact_header" />
-	    
-	    <LinearLayout
-	        android:layout_marginTop="5dp"
-	        android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_mobile_ph"
-			        android:layout_marginLeft="16dp" 
-	
-			        style="@style/TextViewStyle"/>
-			    
-			    <EditText
-			        android:layout_marginRight="16dp" 
-			        android:id="@+id/edit_mobile_ph"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic"/>
-			    
-	    </LinearLayout>
-		
-		<LinearLayout 
-		    android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_home_ph"
-			        android:layout_marginLeft="16dp" 
-			        
-			        style="@style/TextViewStyle"/>		    
-			    
-			    <EditText 
-			        android:layout_marginRight="16dp"
-			        android:id="@+id/edit_home_ph"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic" />
-			        
-		    
-	    </LinearLayout>
-	    
-	    <LinearLayout
-	        android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_work_ph"
-			        android:layout_marginLeft="16dp" 
-	
-			        style="@style/TextViewStyle"/>
-			    
-			    <EditText 
-			        android:layout_marginRight="16dp"
-			        android:id="@+id/edit_work_ph"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic"/>
-			    
-	    </LinearLayout>
-	    
-	    <View
-	        android:layout_marginTop="10dp"
-		    android:layout_width="fill_parent"
-		    android:layout_height="2dp"
-		    android:background="#002e3e"
-		    android:layout_marginLeft="16dp"
-	        android:layout_marginRight="16dp"/>	
-	    	
-		<TextView
-	        android:layout_marginTop="10dp"
-	        android:textColor="#000000"
-	        android:textSize="20sp"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="16dp"
-	        android:textStyle="bold"
-	        android:text="@string/add_personal_header" />
-	    
-	    <LinearLayout
-	        android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="vertical">
-	
-			    <LinearLayout
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content" >
-					
-					<TextView
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content"
-				        android:text="@string/add_label_address_street"
-				        android:layout_marginLeft="16dp" 
-		
-				        style="@style/TextViewStyle"/>
-			        
-			        <EditText 
-				        android:layout_marginRight="16dp"
-				        android:id="@+id/edit_home_street"
-				        android:layout_width="match_parent"
-				        android:layout_height="wrap_content"
-				        android:textStyle="italic"/>
-			    </LinearLayout>
-			    
-			    <LinearLayout
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content" >
-					
-					<TextView
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content"
-				        android:text="@string/add_label_address_suburb"
-				        android:layout_marginLeft="16dp" 
-		
-				        style="@style/TextViewStyle"/>
-			        
-			        <EditText 
-				        android:layout_marginRight="16dp"
-				        android:id="@+id/edit_home_suburb"
-				        android:layout_width="match_parent"
-				        android:layout_height="wrap_content"
-				        android:hint="@string/add_label_address_hint"
-				        android:textStyle="italic"/>
-			    </LinearLayout>
-			    
-			    <LinearLayout
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content" >
-					
-					<TextView
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content"
-				        android:text="@string/add_label_address_city"
-				        android:layout_marginLeft="16dp" 
-		
-				        style="@style/TextViewStyle"/>
-			        
-			        <EditText 
-				        android:layout_marginRight="16dp"
-				        android:id="@+id/edit_home_city"
-				        android:layout_width="match_parent"
-				        android:layout_height="wrap_content"
-				        android:textStyle="italic"/>
-			    </LinearLayout>
-		
-		<LinearLayout 
-		    android:background="#C1D6D6"
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal"
-	    	android:layout_marginTop="10dp">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_email_address"
-			        android:layout_marginLeft="16dp" 
-			        
-			        style="@style/TextViewStyle"/>		    
-			    
-			    <EditText 
-			        android:layout_marginRight="16dp"
-			        android:id="@+id/edit_email"
-			        android:inputType="textEmailAddress"
-			        android:layout_width="match_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#002e3e"
+            android:onClick="saveButton"
+            android:text="@string/add_save_button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
-	    </LinearLayout>			
-			    
-	    </LinearLayout>
-	    
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	    	android:layout_height="wrap_content" 
-	    	android:orientation="horizontal"
-	    	android:background="#C1D6D6"
-	    	android:layout_marginBottom="16dp">
-			    
-			    <TextView
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:text="@string/label_birth_date"
-			        android:layout_marginLeft="16dp"
-	
-			        style="@style/TextViewStyle"/>
-			    
-			    <EditText 
-			        android:id="@+id/edit_dob_day"
-			        android:layout_width="60dp"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic"/>
-			    
-			    <EditText 
-			        android:id="@+id/edit_dob_month"
-			        android:layout_width="70dp"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic"/>
-			    
-			    <EditText 
-			        android:id="@+id/edit_dob_year"
-			        android:layout_width="fill_parent"
-			        android:layout_height="wrap_content"
-			        android:textStyle="italic"
-			        android:layout_marginRight="16dp"/>
-			    		    		    
-			    </LinearLayout>
-			    	        
-	    </LinearLayout>
-        </ScrollView>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/save_button"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/divider"
+            android:background="#002e3e"
+            android:onClick="cancelButton"
+            android:text="@string/add_cancel_button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/photo_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/default_contact" />
+
+        <TextView
+            android:id="@+id/edit_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/edit_header"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrolView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_name_header"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_name_first" />
+
+                <EditText
+                    android:id="@+id/edit_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_name_hint"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_name_last" />
+
+                <EditText
+                    android:id="@+id/edit_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_name_hint"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="#002e3e" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_contact_header"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_mobile_ph" />
+
+                <EditText
+                    android:id="@+id/edit_mobile_ph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_phone_hint"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_home_ph" />
+
+                <EditText
+                    android:id="@+id/edit_home_ph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_phone_hint"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_work_ph" />
+
+                <EditText
+                    android:id="@+id/edit_work_ph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_phone_hint"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="#002e3e" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_personal_header"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C1D6D6"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/add_label_address_street" />
+
+                    <EditText
+                        android:id="@+id/edit_home_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/add_label_address_hint"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/add_label_address_suburb" />
+
+                    <EditText
+                        android:id="@+id/edit_home_suburb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/add_label_address_hint"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/add_label_address_city" />
+
+                    <EditText
+                        android:id="@+id/edit_home_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/add_label_address_hint"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#C1D6D6"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/label_email_address" />
+
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/add_label_address_hint"
+                        android:inputType="textEmailAddress"
+                        android:textStyle="italic" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#C1D6D6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_birth_date" />
+
+                <EditText
+                    android:id="@+id/edit_dob_day"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_label_hint_day"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/edit_dob_month"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_label_hint_month"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/edit_dob_year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/add_label_hint_year"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

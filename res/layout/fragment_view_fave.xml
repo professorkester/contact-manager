@@ -2,33 +2,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#C1D6D6"
-    tools:context=".ViewAllActivity">
+    android:orientation="vertical"
+    tools:context=".HomePageActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#002e3e">
-        
-        <ImageButton 
+        android:background="#002e3e" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="Favourites"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ImageButton
             android:id="@+id/sort_button"
-            android:layout_alignParentRight="true"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_action_sort_by_size"
-            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/photo_description"/>
-        
+            android:contentDescription="@string/photo_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_action_sort_by_size" />
     </RelativeLayout>
-    
+
     <ListView
         android:id="@+id/contact_list"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="0.75"
-        android:background="#C1D6D6">
-    </ListView>	
+        android:background="#C1D6D6" >
+    </ListView>
 
 </LinearLayout>
