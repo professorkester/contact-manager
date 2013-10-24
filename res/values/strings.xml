@@ -13,8 +13,8 @@
     <string name="add_contact_header">Contact Details</string>
     <string name="add_personal_header">Personal Details</string>
     <string name="add_label_name_hint">Enter Name</string>
-    <string name="add_label_address_street">Street</string>
-    <string name="add_label_address_suburb">Suburb</string>
+    <string name="add_label_address_street">Line1</string>
+    <string name="add_label_address_suburb">Line2</string>
     <string name="add_label_address_city">City</string>
     <string name="add_label_address_hint">Enter Address</string>
     <string name="add_label_phone_hint">Enter Phone No.</string>

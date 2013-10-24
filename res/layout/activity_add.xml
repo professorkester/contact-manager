@@ -117,10 +117,12 @@
                 <EditText
                     android:id="@+id/add_first_name"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_name_hint"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="textPersonName"/>
             </LinearLayout>
 
             <LinearLayout
@@ -142,7 +144,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_name_hint"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <View
@@ -183,7 +186,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:inputType="number"/>
             </LinearLayout>
 
             <LinearLayout
@@ -205,7 +209,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="number"/>
             </LinearLayout>
 
             <LinearLayout
@@ -227,7 +232,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="number"/>
             </LinearLayout>
 
             <View
@@ -271,7 +277,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="16dp"
                         android:hint="@string/add_label_address_hint"
-                        android:textStyle="italic" />
+                        android:textStyle="italic" 
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -335,7 +342,7 @@
                         android:layout_marginRight="16dp"
                         android:hint="@string/add_label_address_hint"
                         android:inputType="textEmailAddress"
-                        android:textStyle="italic" />
+                        android:textStyle="italic"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -358,14 +365,16 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/add_label_hint_day"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="date"/>
 
                 <EditText
                     android:id="@+id/add_dob_month"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/add_label_hint_month"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="date"/>
 
                 <EditText
                     android:id="@+id/add_dob_year"
@@ -373,7 +382,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_hint_year"
-                    android:textStyle="italic" />
+                    android:textStyle="italic" 
+                    android:inputType="date"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -52,6 +52,7 @@
         android:orientation="horizontal" >
 
         <ImageButton
+            android:id="@+id/edit_photo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
@@ -112,6 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_name_hint"
+                    android:inputType="textPersonName"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -134,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_name_hint"
+                    android:inputType="textPersonName"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -175,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
+                    android:inputType="number"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -197,6 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
+                    android:inputType="number"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -219,6 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_phone_hint"
+                    android:inputType="number"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -350,6 +356,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/add_label_hint_day"
+                    android:inputType="date"
                     android:textStyle="italic" />
 
                 <EditText
@@ -357,6 +364,7 @@
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/add_label_hint_month"
+                    android:inputType="date"
                     android:textStyle="italic" />
 
                 <EditText
@@ -365,6 +373,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"
                     android:hint="@string/add_label_hint_year"
+                    android:inputType="date"
                     android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
